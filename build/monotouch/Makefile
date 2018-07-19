@@ -2,7 +2,7 @@ PROFILE := monotouch
 SOURCEDIR := ../../src/$(PROFILE)/
 
 CSC ?= csc
-CSC_COMMON_ARGS := -nologo -noconfig -optimize -nostdlib -unsafe -deterministic -publicsign -debug- -target:library -nowarn:612,618,809
+CSC_COMMON_ARGS := -nologo -noconfig -optimize -nostdlib -unsafe -deterministic -delaysign -debug- -target:library -nowarn:612,618,809
 Q_CSC = $(if $(V),,@echo "CSC   [$(PROFILE)] $(1)";)
 
 ASSEMBLIES := mscorlib System System.Xml System.Numerics System.Core System.Net.Http

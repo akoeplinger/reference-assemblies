@@ -2,7 +2,7 @@ PROFILE := v3.5
 SOURCEDIR := ../src/$(PROFILE)/
 
 CSC ?= csc
-CSC_COMMON_ARGS := -nologo -noconfig -optimize -nostdlib -unsafe -deterministic -publicsign -debug- -target:library -nowarn:612 -nowarn:618
+CSC_COMMON_ARGS := -nologo -noconfig -optimize -nostdlib -unsafe -deterministic -delaysign -debug- -target:library -nowarn:612 -nowarn:618
 Q_CSC = $(if $(V),,@echo "CSC   [$(PROFILE)] $(1)";)
 
 ASSEMBLIES := Microsoft.Build.Engine Microsoft.Build.Framework Microsoft.Build.Tasks.v3.5 Microsoft.Build.Utilities.v3.5
